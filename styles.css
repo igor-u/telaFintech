@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --cor-1: #035;
+    --cor-2: rgb(221, 221, 221);
+    --cor-3: #FF5200;
+    --cor-4: #ADACA7;
+    --cor-5: #002E4D;
+    --cor-6: #161616;
+    --cor-7: #4e4e4e;
+    --fonte-principal: 'Quicksand', sans-serif;
+}
+
+ol, ul, p, a {
+    padding: 0;
+    margin: 0;
+}
+
+/* img, svg {
+    vertical-align: baseline;
+} */
+
+* {
+    font-family: var(--fonte-principal);
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    width: 0.25em;
+}
+
+::-webkit-scrollbar-track {
+    display: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-7);
+    border-radius: 100vw;
+}
+
+/* Estilos Header */
+
+.header {
+    width: 100%;
+    display: grid;
+    padding: 0 8rem 0 8rem;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "logo nav user";
+    align-items: center;
+    height: 96px;
+    background-image: linear-gradient(180deg, var(--cor-1) 10%, var(--cor-5) 60%);
+}
+
+.logo {
+    grid-area: logo;
+    position: flex;
+}
+
+.logo-mobile {
+    margin: 2rem 2rem;
+    display: flex;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+}
+
+.user {
+    grid-area: user;
+    display: flex;
+}
+
+ul {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-top: 0.6rem;
+}
+
+a, p {
+    color: var(--cor-4);
+    text-decoration: none;
+}
+
+.underline {
+    color: var(--cor-3);
+}
+
+li :not(.underline):hover {
+    color: var(--cor-2);
+}
+
+.underline::after {
+    content: '';
+    height: 3px;
+    background: var(--cor-3);
+    border-radius: 6px;
+    display: block;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user > p {
+    padding-right: 2rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    color: var(--cor-2);
+}
+
+/* Fim Estilos Header */
+
+/* Estilos Main */
+
+h2 {
+    font-size: 3rem;
+    font-weight: normal;
+    color: var(--cor-2);
+}
+
+.retangulo {
+    display: flex;
+    height: 5rem;
+    width: auto;
+    box-shadow: 0 16px 32px black;
+    z-index: 1;
+    justify-content: space-between;
+    
+}
+
+.retangulo-2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 5rem;
+    width: auto;
+    box-shadow: 0 -16px 32px black;
+    z-index: 1;
+}
+
+.divisao {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.acoes {
+    width: 50vw;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem 0;
+    grid-template-areas: "acao1 acao2 acao3"
+                         "acao4 acao5 acao6";
+    margin: 1rem 0 1rem 0;
+    padding: 0 2rem;
+    color: var(--cor-4);
+    overflow-y: scroll;
+}
+
+.acao1 {
+    grid-area: acao1;
+}
+
+.acao2 {
+    grid-area: acao2;
+}
+
+.acao3 {
+    grid-area: acao3;
+}
+
+.acao4 {
+    grid-area: acao4;
+}
+
+.acao5 {
+    grid-area: acao5;
+}
+
+.acao6 {
+    grid-area: acao6;
+}
+
+.acao {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clicavel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.borda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    background-color: transparent;
+    border: 1px solid var(--cor-4);
+    border-radius: 5px;
+}
+
+.clicavel:hover > .borda {
+    background-color: var(--cor-6);
+}
+.clicavel:hover > p {
+    color: var(--cor-2);
+}
+
+.clicavel > p {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.icone {
+    width: 4rem;
+}
+
+table {
+    color: var(--cor-4);
+    width: 90%;
+}
+
+td img {
+    vertical-align: inherit;
+    width: 2rem;
+}
+
+td img:hover {
+    cursor: pointer;
+}
+
+tr, td {
+    text-align: center;
+}
+
+tbody tr td:not(:first-child):hover {
+    background-color: var(--cor-6);
+    cursor: pointer;
+}
+
+tbody tr {
+    height: 4rem;
+}
+
+.movimentacoes {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 20rem;
+    color: var(--cor-4);
+    overflow-y: scroll;
+}
+
+thead tr th {
+    padding: 2rem 0;;
+}
+
+tfoot td{
+    padding: 1rem 0;
+    text-align: start;
+}
+
+.retangulo a {
+    display: flex;
+}
+
+.retangulo > a {
+    width: 2.5rem;
+    padding: 0 0 0.5rem 0;
+}
+
+.main {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coluna-informacoes {
+    width: 2rem;
+}
+
+/* Fim Estilos Main */
+
+/* Estilos footer */
+
+footer {
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries */
+
+.underline-2 {
+    color: var(--cor-3);
+}
+
+.underline-2::after {
+    content: '';
+    height: 3px;
+    background: var(--cor-3);
+    border-radius: 6px;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 951px) {
+    .logo:nth-child(2) {
+        display: none;
+    }
+
+    ul:nth-child(2) {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    footer > p:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+
+    footer > p:nth-child(2) {
+        display: none;
+    }
+
+    footer {
+        position: relative;
+        bottom: 8rem;
+    }
+
+    .main {
+        margin-bottom: 10rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        z-index: 2;
+        height: 80px;
+    }
+
+    .acoes, .movimentacoes {
+        width: 80vw;
+    }
+
+    .coluna-informacoes{
+        display: none;
+    }
+
+    .logo:first-child {
+        display: none;
+    }
+
+    .user {
+        display: none;
+    }
+
+    ul:first-child {
+        display: none;
+    }
+
+    .user p {
+        display: none;
+    }
+
+    .header {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .user {
+        padding: 0;
+    }
+
+    nav  ul {
+        gap: 5rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+footer > p:nth-child(1) {
+    display: none;
+    }
+
+footer > p:nth-child(2) {
+    display: block;
+    }
+
+.coluna-data {
+    display: none;
+}
+
+nav  ul {
+    gap: 3rem;
+}
+
+}
+
+.icone-nav {
+    width: 3rem;
+}
